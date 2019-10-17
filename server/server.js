@@ -119,7 +119,7 @@ server.get('/api/users/:pageIndex', (req, res) => {
         () => {
           res.json(
             {
-              TotalPages: (GenData.size / PAGE_SIZE) - 1,
+              TotalPages: (GenData.size / PAGE_SIZE),
               list: GenData.slice(+pageIndex * PAGE_SIZE, (+pageIndex + 1) * PAGE_SIZE)
             }
           )
