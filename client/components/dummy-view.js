@@ -41,7 +41,7 @@ const Dummy = (props) => {
             <td>Street</td>
           </tr>
           {
-            props.users.map(user => (
+            props.users.map((user) => (
               <tr>
                 <td><img src={user.avatar} alt="avatar" className="avatar" /></td>
                 <td>{user.name}</td>
@@ -65,14 +65,14 @@ const Dummy = (props) => {
 
 Dummy.propTypes = {}
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   isRequesting: state.users.isRequesting,
   users: state.users.list,
   error: state.users.error,
   TotalPages: state.users.TotalPages
 })
 
-const mapDispatchToProps = dispatch => bindActionCreators({
+const mapDispatchToProps = (dispatch) => bindActionCreators({
   getData
 }, dispatch)
 
