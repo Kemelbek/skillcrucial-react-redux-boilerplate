@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Route, Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
 import { getData } from '../redux/reducers/users'
@@ -20,9 +21,18 @@ const Dummy = (props) => {
   const NextPage = () => setPageIndex(Math.min(props.TotalPages - 1, pageIndex + 1))
 
 
-  if (!props.isRequesting) {
+  if (props.TotalPages) {
     return (
       <div>
+        <Route exact path="/salo/jalo" component={() => <div> JALO JALO JALO </div>} />
+        <Route exact path="/salo/sosalo/susalo" component={() => <div> SOSALO  SOSALO  SOSALO </div>} />
+
+        <Link to="/">Go Home</Link>
+        <br />
+        <Link to="/salo/jalo">JALO</Link>
+        <br />
+        <Link to="/salo/sosalo/susalo">SOSALO</Link>
+
         <div> Page {pageIndex + 1}/{props.TotalPages}. Page length is {props.users.length} </div>
         { pageIndex !== 0 && (<button id="buttonPrev" type="button" onClick={PrevPage}> Prev </button>)}
         { ((pageIndex + 1) !== props.TotalPages) && (<button id="buttonNext" type="button" onClick={NextPage}>Next</button>) }
@@ -59,7 +69,7 @@ const Dummy = (props) => {
       </div>
     )
   }
-  return (<div> Please Wait a moment  </div>)
+  return (<div> Please Wait a moment. Or reload page  </div>)
 }
 
 Dummy.propTypes = {}
