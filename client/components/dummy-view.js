@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+// import { Route, Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
 import { getData } from '../redux/reducers/users'
@@ -20,7 +21,7 @@ const Dummy = (props) => {
   const NextPage = () => setPageIndex(Math.min(props.TotalPages - 1, pageIndex + 1))
 
 
-  if (!props.isRequesting) {
+  if (props.TotalPages) {
     return (
       <div>
         <div> Page {pageIndex + 1}/{props.TotalPages}. Page length is {props.users.length} </div>
@@ -59,7 +60,7 @@ const Dummy = (props) => {
       </div>
     )
   }
-  return (<div> Please Wait a moment  </div>)
+  return (<div> Please Wait a moment. Or reload page  </div>)
 }
 
 Dummy.propTypes = {}
