@@ -45,7 +45,7 @@ const Home = () => {
       <div> Hello World Home {counter} </div>
       <button type="button" onClick={() => { updateCounter(counter + 1) }}>Increase counter</button>
       <br />
-      <button type="button" onClick={() => { updateCounter(counter + -1) }}>Increase counter</button>
+      <button type="button" onClick={() => { updateCounter(counter + -1) }}>Decrease counter</button>
       <br />
       <Link to="/">Go Home</Link>
       <br />
