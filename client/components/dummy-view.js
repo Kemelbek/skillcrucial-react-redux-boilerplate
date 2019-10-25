@@ -25,8 +25,8 @@ const Dummy = (props) => {
     return (
       <div>
         <div> Page {pageIndex + 1}/{props.TotalPages}. Page length is {props.users.length} </div>
-        { pageIndex !== 0 && (<button id="buttonPrev" type="button" onClick={PrevPage}> Prev </button>)}
-        { ((pageIndex + 1) !== props.TotalPages) && (<button id="buttonNext" type="button" onClick={NextPage}>Next</button>) }
+        {pageIndex !== 0 && (<button id="buttonPrev" type="button" onClick={PrevPage}> Prev </button>)}
+        {((pageIndex + 1) !== props.TotalPages) && (<button id="buttonNext" type="button" onClick={NextPage}>Next</button>)}
 
         <table>
           <tr>
