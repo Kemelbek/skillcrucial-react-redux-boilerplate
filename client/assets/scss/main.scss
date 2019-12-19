@@ -17,3 +17,65 @@ div {
     }
   }
 }
+
+.header {
+  .header-menu {
+    background: red;
+  }
+}
+
+.body {
+  .header-menu {
+    background: blue;
+  }
+  .header2-menu {
+    background: green;
+    .li {
+      .smth {
+      }
+    }
+  }
+}
+
+.body .header-menu {
+  background: pink;
+}
+
+.body .header-menu {
+  background: pink;
+}
+
+body {
+  // @media screen and (min-width: 700px) and (max-width: 800px) {
+  //   background: red;
+  // }
+  @media screen and (hover: none) {
+    background: red;
+  }
+}
+
+.link {
+  color: green;
+  &:active {
+    color: red;
+  }
+  &:hover {
+    text-decoration: underline;
+    font-size: 20px;
+  }
+}
+
+.p-container {
+  .p {
+    padding-left: 15px;
+    &:first-child {
+      padding-left: 30px;
+    }
+    &:last-child {
+      padding-left: 30px;
+    }
+    &:nth-child(odd) {
+      background: rgba(255, 0, 0, 0.1);
+    }
+  }
+}

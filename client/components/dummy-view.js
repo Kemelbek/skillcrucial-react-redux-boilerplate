@@ -6,11 +6,13 @@ const Dummy = () => {
   // const [counter] = useState(0)
   return (
     <div>
-      <div className="row">
-        <div className="col-12 col-lg-4">1</div>
-        <div className="col-12 col-lg-4">2</div>
-        <div className="col-12 col-lg-4">3</div>
-      </div>
+      <a href="https://google.com/" className="link">my-link my link</a>
+      <p className="p-container">
+        <p className="p">Paragraph 1</p>
+        <p className="p">Paragraph 2</p>
+        <p className="p">Paragraph 3</p>
+        <p className="p">Paragraph 4</p>
+      </p>
     </div>
   )
 }
